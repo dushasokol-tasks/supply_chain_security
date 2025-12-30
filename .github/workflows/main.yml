@@ -22,7 +22,7 @@ jobs:
 
     - name: Generate SBOM
       run: |
-        syft docker.io/library/nginx:latest -o spdx-sbom > nginx-spdx.sbom
+        syft docker.io/library/nginx:latest -o spdx > nginx-spdx.sbom
 
     - name: Upload SBOM Artifact
       uses: actions/upload-artifact@v4
